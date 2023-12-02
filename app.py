@@ -5,9 +5,9 @@ from collections.abc import MutableSequence
 
 app = Flask(__name__)
 
-username = "FRANCO"
-password = "pes2013es"
-host = 'localhost:1521/xe'
+username = ""
+password = ""
+host = ''
 connection_str = f"{username}/{password}@{host}"
 
 try:
