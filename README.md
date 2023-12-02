@@ -5,5 +5,3 @@ Este proyecto está implementado en Python utilizando Flask como framework para 
 ## Páginas
 
 El proyecto incluye 5 páginas: Clientes, Ventas, Envios, Agregar Cliente y Registrar Venta.
-```bash
-npm install  # O cualquier otro comando de instalación necesario
