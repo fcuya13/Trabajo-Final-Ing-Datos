@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clientes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+ {% extends "navbar.html" %}
+ {% block content %}
+<div class = "content">
+    <h1>Clientes</h1>
+    <div class="query">
+        <table>
+            <thead>
+                <tr>
+                    <th>DNI/RUC</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Celular</th>
+                    <th>Dirección</th>
+                    <th>Editar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% set unique_ids = {} %}
+                {% for dato in resultados['Data'] %}
+                    {% if dato[0] not in unique_ids %}
+                        <tr>
+                            <td>{{ dato[0] }}</td>
+                            <td>{{ dato[1] }}</td>
+                            <td>{{ dato[2] }}</td>
+                            <td>{{ dato[3] }}</td>
+                            <td>{{ dato[4] }}</td>
+                            <td id = "edit"> <a href="clientes"><img src ="{{ url_for('static', filename='edit-solid.svg') }}" width = 20px></a></td>
+                        </tr>
+                        {% set _ = unique_ids.update({dato[0]: True}) %}
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href = "{{ url_for('procesar_formulario') }}"><button class = "plain-button">Agregar cliente</button></a>
+    </div>
+</div>
+{% endblock %}
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Envios</title>
+</head>
+
+<body>
+{% extends "navbar.html" %}
+{% block content %}
+<div class = "content">
+    <h1>Envios</h1>
+    <div class="query">
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Cliente</th>
+                    <th>Direccion</th>
+                    <th>Producto</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for dato in resultados['Data'] %}
+                        <tr>
+                            <td>{{ dato[0].strftime('%d/%m/%Y') }}</td>
+                            <td>{{ dato[1] }}</td>
+                            <td>{{ dato[2] }}</td>
+                            <td>{{ dato[3] }}</td>
+                             {% if dato[4] == 'Enviado' %}
+                                <td id = "sent">{{ dato[4] }}</td>
+                                {% elif dato[4] == 'Entregado' %}
+                                <td id = "entr"> {{ dato[4] }}</td>
+                                {% elif dato[4] == 'En preparacion' %}
+                                <td id = "prep">{{ dato[4] }}</td>
+                            {% endif %}
+                        </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clientes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+ {% extends "navbar.html" %}
+ {% block content %}
+    <div class="form-container">
+        <h1>Agregar Cliente</h1>
+        <form method="post" action="{{ url_for('procesar_formulario') }}">
+            <div class="form-group">
+                <label for="dni_ruc" class="form-label">DNI/RUC:</label>
+                <input type="text" id="dni_ruc" name="dni_ruc" required class="form-input">
+            </div>
+
+            <div class="form-group">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required class="form-input">
+            </div>
+
+            <div class="form-group">
+                <label for="correo" class="form-label">Correo:</label>
+                <input type="email" id="correo" name="correo" required class="form-input">
+            </div>
+
+            <div class="form-group">
+                <label for="celular" class="form-label">Celular:</label>
+                <input type="tel" id="celular" name="celular" required class="form-input">
+            </div>
+
+            <div class="form-group">
+                <label for="direccion" class="form-label">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required class="form-input">
+            </div>
+
+            <div class="form-group">
+                <label for="distrito" class="form-label">Distrito:</label>
+                <input type="text" id="distrito" name="distrito" class="form-input">
+            </div>
+
+            <div class="form-group">
+                <label for="ciudad" class="form-label">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" class="form-input">
+            </div>
+
+            <div class="form-group">
+                <label for="cod_postal" class="form-label">Código Postal:</label>
+                <input type="text" id="cod_postal" name="cod_postal" class="form-input">
+            </div>
+
+            <button type="submit" class="form-button" >Enviar</button>
+        </form>
+    </div>
+{% endblock %}
+</body>
+</html>

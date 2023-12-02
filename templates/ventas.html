@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Ventas</title>
+</head>
+
+<body>
+{% extends "navbar.html" %}
+{% block content %}
+<div class = "content">
+    <h1>Ventas</h1>
+    <div class="query">
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Cliente</th>
+                    <th>Direccion</th>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Costo de envio</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for dato in resultados['Data'] %}
+                        <tr>
+                            <td>{{ dato[0].strftime('%d/%m/%Y') }}</td>
+                            <td>{{ dato[1] }}</td>
+                            <td>{{ dato[6] }}</td>
+                            <td>{{ dato[2] }}</td>
+                            <td>{{ dato[3] }}</td>
+                            <td>S/. {{ dato[4] }}</td>
+                            <td>S/. {{dato[7]}}</td>
+                            <td>S/. {{dato[5] + dato[7]}}</td>
+                        </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href = "{{ url_for('formulario_venta') }}"><button class = "plain-button">Registrar Venta</button></a>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

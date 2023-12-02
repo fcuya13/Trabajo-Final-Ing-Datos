@@ -1,0 +1,178 @@
+
+
+.bg-gray-800 {
+  background-color: #60B45A;
+}
+body {
+  margin: 0;
+    font-family: Lato;
+}
+.container {
+  padding: 0.8rem;
+  margin: 0 auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.text-black {
+  color: #000;
+  font-size: 24px;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.space-x-4 {
+  --tw-space-x-reverse: 0;
+  gap: 3rem;
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: calc(1rem * var(--tw-space-x-reverse));
+  margin-right: calc(1rem * (1 - var(--tw-space-x-reverse)));
+}
+
+li {
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  list-style: none;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.content {
+  margin : 20px;
+}
+
+
+h1 {
+    color: #333;
+    font-weight: 900;
+}
+
+.query {
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+.plain-button {
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    background-color: #3490dc;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid transparent;
+    margin-top: 20px;
+    font-size : 16px;
+
+    &:hover {
+        background-color: #2779bd;
+    }
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.form-container h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.form-button {
+  background-color: #3490dc;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #2779bd;
+}
+
+#prep{
+    color: red;
+    font-weight: bold;
+}
+
+#entr{
+    color: green;
+}
+
+#sent{
+    color: darkgoldenrod;
+}
+
+#edit{
+    text-align: center;
+}

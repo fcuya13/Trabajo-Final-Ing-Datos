@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+  <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <div>
+                <a href="/" class="text-black">AMUYU</a>
+            </div>
+            <div>
+                <ul class="flex space-x-4">
+                    <li><a href="ventas" class="text-black">Ventas</a></li>
+                    <li><a href="envios" class="text-black">Envios</a></li>
+                    <li><a href="clientes" class="text-black">Clientes</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    {% block content %}
+    {% endblock %}
+
+
+</body>
+</html>
